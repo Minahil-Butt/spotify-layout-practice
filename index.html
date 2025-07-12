@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Flexbox Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        
+        .container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+        
+        .sidebar {
+            width: 250px;
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: width 0.3s;
+            overflow-y: auto;
+            max-height: 100vh;
+        }
+        
+        .main-content {
+            flex: 1;
+            background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            overflow-y: auto;
+            justify-content: center;
+        }
+        
+        .album {
+            width: calc(33.33% - 10px);
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            color: #121212;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        
+        .album:hover {
+            transform: scale(1.05);
+        }
+        
+        .player {
+            background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <h2>My Music</h2>
+            <a href="#">Home</a>
+            <a href="#">Search</a>
+            <a href="#">Library</a>
+        </nav>
+        <section class="main-content">
+            <div class="album">Album 1</div>
+            <div class="album">Album 2</div>
+            <div class="album">Album 3</div>
+            <div class="album">Album 4</div>
+            <div class="album">Album 5</div>
+            <div class="album">Album 6</div>
+        </section>
+    </div>
+    <footer class="player">Now Playing: Song Name</footer>
+</body>
+</html>
