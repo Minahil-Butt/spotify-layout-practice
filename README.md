@@ -7,7 +7,6 @@ This project is a front-end clone of Spotify’s web layout, built using HTML an
 A static Spotify-inspired UI that includes:
 - Sidebar navigation (Home, Search, Library)
 - Main content area with playlists and cards
-- Header section with controls
 - Clean and modern dark-themed layout
 
 ## 🛠️ Built With
